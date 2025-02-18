@@ -57,8 +57,6 @@ public class Driver1 {
                             enrollments[enrollmentCount++] = new Enrollment(courseCode, studentId, year, semester, defaultNotes);
                         }
                         break;
-                    default:
-                        System.out.println("Invalid command!");
                 }
             }
         }
