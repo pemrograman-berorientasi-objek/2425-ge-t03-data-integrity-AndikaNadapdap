@@ -1,6 +1,8 @@
 package academic.driver;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 import academic.model.Course;
@@ -45,7 +47,10 @@ public class Driver2 {
                             String major = parts[4];
                             students.add(new Student(code, name, year, major));
                         }
+                        Collections.sort(courses, Comparator.comparing(Course::getCode));
+                        Collections.sort(enrollments, Comparator.comparing(Enrollment::getCode));
                         break;
+            
                     case "enrollment-add":
                         if (parts.length == 5) {
                             String courseCode = parts[1];
